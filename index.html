@@ -37,7 +37,6 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── Animated ocean background ─────────────────────────── */
   #ocean-bg {
     position: fixed; inset: 0; z-index: 0; overflow: hidden;
     background: linear-gradient(180deg, #021e3a 0%, #0a3d6b 45%, #0d6ea4 80%, #1a9bc4 100%);
@@ -62,7 +61,6 @@
     100% { transform: translateY(-120px) scale(1.15); opacity: 0; }
   }
 
-  /* ── Layout screens ─────────────────────────────────────── */
   .screen {
     position: relative; z-index: 1;
     min-height: 100vh;
@@ -74,7 +72,6 @@
   @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
   .hidden { display: none !important; }
 
-  /* ── Splash header ──────────────────────────────────────── */
   .society-name {
     font-family: var(--ff-title);
     font-size: clamp(26px, 5.5vw, 52px);
@@ -96,7 +93,6 @@
     text-align: center;
   }
 
-  /* ── Glass card ─────────────────────────────────────────── */
   .card {
     background: var(--glass);
     backdrop-filter: blur(12px);
@@ -105,12 +101,9 @@
     border-radius: 18px;
     padding: 30px 36px;
   }
-  .card-sm { padding: 22px 28px; border-radius: 14px; }
 
-  /* ── Camera icon ─────────────────────────────────────────── */
   .camera-icon { margin-bottom: 18px; }
 
-  /* ── Role selector ───────────────────────────────────────── */
   .role-label {
     display: flex; align-items: center; gap: 14px;
     padding: 14px 18px; border-radius: 11px;
@@ -128,38 +121,23 @@
   .role-label .role-name { font-weight: 600; font-size: 15px; color: var(--white); }
   .role-label .role-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
 
-  /* ── Buttons ─────────────────────────────────────────────── */
   .btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 8px;
     padding: 14px 28px; border-radius: 11px; border: none;
     font-family: var(--ff-body); font-weight: 600; font-size: 14px;
     letter-spacing: 0.06em; cursor: pointer; transition: all 0.2s;
   }
-  .btn-primary {
-    background: linear-gradient(135deg, var(--mid), var(--aqua));
-    color: var(--deep);
-  }
+  .btn-primary { background: linear-gradient(135deg, var(--mid), var(--aqua)); color: var(--deep); }
   .btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
   .btn-primary:disabled { background: rgba(255,255,255,0.12); color: var(--muted); transform: none; filter: none; cursor: not-allowed; }
-  .btn-danger {
-    background: none; border: 1px solid rgba(255,100,100,0.35);
-    color: rgba(255,130,130,0.8); font-size: 12px; padding: 8px 20px;
-  }
+  .btn-danger { background: none; border: 1px solid rgba(255,100,100,0.35); color: rgba(255,130,130,0.8); font-size: 12px; padding: 8px 20px; }
   .btn-danger:hover { background: rgba(255,80,80,0.1); }
-  .btn-count {
-    padding: 18px 56px; border-radius: 14px; font-size: 17px;
-    background: none; border: 2px solid var(--aqua);
-    color: var(--aqua); letter-spacing: 0.08em;
-  }
+  .btn-count { padding: 18px 56px; border-radius: 14px; font-size: 17px; background: none; border: 2px solid var(--aqua); color: var(--aqua); letter-spacing: 0.08em; }
   .btn-count:hover { background: rgba(126,232,250,0.15); }
   .btn-full { width: 100%; }
-  .btn-ghost {
-    background: none; border: 1px solid var(--border);
-    color: var(--soft); font-size: 13px; padding: 10px 24px;
-  }
+  .btn-ghost { background: none; border: 1px solid var(--border); color: var(--soft); font-size: 13px; padding: 10px 24px; }
   .btn-ghost:hover { background: var(--glass2); }
 
-  /* ── Form elements ───────────────────────────────────────── */
   .field-label { font-size: 12px; letter-spacing: 0.09em; color: var(--muted); margin-bottom: 8px; }
   input[type=number], input[type=text] {
     background: rgba(255,255,255,0.1);
@@ -173,138 +151,59 @@
   input[type=number]::placeholder, input[type=text]::placeholder { color: rgba(255,255,255,0.3); }
   input[type=number]::-webkit-inner-spin-button { opacity: 0.4; }
 
-  /* ── Section label ───────────────────────────────────────── */
-  .section-tag {
-    font-size: 11px; letter-spacing: 0.12em; color: var(--aqua);
-    text-transform: uppercase; margin-bottom: 12px; font-weight: 500;
-  }
+  .section-tag { font-size: 11px; letter-spacing: 0.12em; color: var(--aqua); text-transform: uppercase; margin-bottom: 12px; font-weight: 500; }
 
-  /* ── URL box ─────────────────────────────────────────────── */
   .url-box {
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.13);
-    border-radius: 8px; padding: 10px 14px;
-    font-size: 13px; color: var(--aqua);
-    word-break: break-all; line-height: 1.5;
-    font-family: 'Courier New', monospace;
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13);
+    border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--aqua);
+    word-break: break-all; line-height: 1.5; font-family: 'Courier New', monospace;
   }
 
-  /* ── QR wrapper ──────────────────────────────────────────── */
-  .qr-wrap {
-    background: #fff; padding: 12px; border-radius: 12px;
-    display: inline-block; line-height: 0;
-  }
+  .qr-wrap { background: #fff; padding: 12px; border-radius: 12px; display: inline-block; line-height: 0; }
 
-  /* ── Results bar ─────────────────────────────────────────── */
-  .result-row {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 13px; padding: 15px 20px;
-    margin-bottom: 10px; display: flex; align-items: center; gap: 16px;
-  }
-  .result-row.winner {
-    background: rgba(126,232,250,0.1);
-    border-color: rgba(126,232,250,0.35);
-  }
+  .result-row { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 13px; padding: 15px 20px; margin-bottom: 10px; display: flex; align-items: center; gap: 16px; }
+  .result-row.winner { background: rgba(126,232,250,0.1); border-color: rgba(126,232,250,0.35); }
   .result-rank { min-width: 36px; text-align: center; font-size: 20px; }
   .result-bar-wrap { flex: 1; }
   .result-meta { display: flex; justify-content: space-between; margin-bottom: 7px; }
   .result-photo { font-weight: 600; font-size: 15px; }
   .result-count { color: var(--aqua); font-weight: 700; font-size: 15px; }
-  .result-bar-bg {
-    height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden;
-  }
-  .result-bar-fill {
-    height: 100%; border-radius: 4px;
-    background: linear-gradient(90deg, var(--mid), var(--aqua));
-    transition: width 1.2s cubic-bezier(0.22,1,0.36,1);
-  }
+  .result-bar-bg { height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; }
+  .result-bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--mid), var(--aqua)); transition: width 1.2s cubic-bezier(0.22,1,0.36,1); }
 
-  /* ── Status pill ─────────────────────────────────────────── */
-  .pill {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 5px 12px; border-radius: 99px; font-size: 12px; font-weight: 500;
-  }
+  .pill { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 99px; font-size: 12px; font-weight: 500; }
   .pill-green { background: rgba(80,220,120,0.15); color: #50dc78; border: 1px solid rgba(80,220,120,0.3); }
-  .pill-yellow { background: rgba(245,200,66,0.15); color: var(--gold); border: 1px solid rgba(245,200,66,0.3); }
-  .pill-red { background: rgba(255,80,80,0.12); color: #ff7070; border: 1px solid rgba(255,80,80,0.25); }
 
-  /* ── Vote input big ──────────────────────────────────────── */
-  .vote-input-big {
-    font-size: 36px !important; text-align: center; width: 100%;
-    padding: 18px !important; letter-spacing: 0.05em;
-  }
-
-  /* ── Voter success ───────────────────────────────────────── */
-  .vote-confirm {
-    color: var(--aqua); font-size: 14px; margin-top: 14px; line-height: 1.6;
-  }
-
-  /* ── Error text ──────────────────────────────────────────── */
+  .vote-input-big { font-size: 36px !important; text-align: center; width: 100%; padding: 18px !important; letter-spacing: 0.05em; }
+  .vote-confirm { color: var(--aqua); font-size: 14px; margin-top: 14px; line-height: 1.6; }
   .err { color: #ff8a80; font-size: 13px; margin-top: 8px; min-height: 18px; }
-
-  /* ── Divider ─────────────────────────────────────────────── */
   .divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
 
-  /* ── Misc helpers ────────────────────────────────────────── */
   .center { text-align: center; }
-  .mt8  { margin-top: 8px; }
-  .mt12 { margin-top: 12px; }
-  .mt16 { margin-top: 16px; }
-  .mt20 { margin-top: 20px; }
-  .mt28 { margin-top: 28px; }
-  .mt36 { margin-top: 36px; }
-  .mb12 { margin-bottom: 12px; }
-  .mb20 { margin-bottom: 20px; }
+  .mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mt20{margin-top:20px}.mt28{margin-top:28px}.mt36{margin-top:36px}.mb12{margin-bottom:12px}.mb20{margin-bottom:20px}
   .flex-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
   .muted { color: var(--muted); font-size: 12px; }
-  .strong { font-weight: 600; color: var(--white); }
 
-  /* ── Admin grid ──────────────────────────────────────────── */
   .admin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
   @media (max-width: 600px) { .admin-grid { grid-template-columns: 1fr; } }
 
-  /* ── Waiting spinner ─────────────────────────────────────── */
-  .spinner {
-    width: 48px; height: 48px; border-radius: 50%;
-    border: 3px solid rgba(126,232,250,0.2);
-    border-top-color: var(--aqua);
-    animation: spin 0.9s linear infinite;
-    margin: 0 auto 20px;
-  }
+  .spinner { width: 48px; height: 48px; border-radius: 50%; border: 3px solid rgba(126,232,250,0.2); border-top-color: var(--aqua); animation: spin 0.9s linear infinite; margin: 0 auto 20px; }
   @keyframes spin { to { transform: rotate(360deg); } }
 
-  /* ── Config banner ───────────────────────────────────────── */
-  #config-banner {
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(245,200,66,0.15); border-top: 1px solid rgba(245,200,66,0.4);
-    padding: 10px 20px; font-size: 12px; color: var(--gold);
-    text-align: center; display: none;
-  }
+  #config-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: rgba(245,200,66,0.15); border-top: 1px solid rgba(245,200,66,0.4); padding: 10px 20px; font-size: 12px; color: var(--gold); text-align: center; display: none; }
 
-  /* ── Underwater hero image ───────────────────────────────── */
-  .hero-img-placeholder {
-    width: 100%; max-width: 480px; height: 180px;
-    border-radius: 14px; border: 1px solid var(--border);
-    background: linear-gradient(135deg, #0a3d6b 0%, #0d6ea4 60%, #1a9bc4 100%);
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 24px;
-    overflow: hidden; position: relative;
-  }
+  .hero-img-placeholder { width: 100%; max-width: 480px; height: 180px; border-radius: 14px; border: 1px solid var(--border); background: linear-gradient(135deg, #0a3d6b 0%, #0d6ea4 60%, #1a9bc4 100%); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; overflow: hidden; position: relative; }
 </style>
 </head>
 <body>
 
-<!-- Ocean animated background -->
 <div id="ocean-bg"></div>
 
-<!-- ════════════════════════════════════════════════════════ -->
-<!--  SCREEN 1 · SPLASH / ROLE SELECTION                     -->
-<!-- ════════════════════════════════════════════════════════ -->
+<!-- SCREEN 1 · SPLASH -->
 <div id="screen-splash" class="screen">
   <div class="center mb20">
     <div class="camera-icon">
-      <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
         <circle cx="36" cy="36" r="34" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"/>
         <rect x="17" y="25" width="38" height="28" rx="5" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.55)" stroke-width="1.4"/>
         <circle cx="36" cy="39" r="9.5" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="1.4"/>
@@ -313,97 +212,47 @@
         <circle cx="51" cy="29" r="2.8" fill="rgba(255,255,255,0.45)"/>
       </svg>
     </div>
-
-    <div class="hero-img-placeholder" id="hero-wrap">
+    <div class="hero-img-placeholder">
       <svg width="480" height="180" viewBox="0 0 480 180" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%">
-        <defs>
-          <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#0a3d6b"/>
-            <stop offset="100%" stop-color="#1a9bc4"/>
-          </linearGradient>
-        </defs>
+        <defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a3d6b"/><stop offset="100%" stop-color="#1a9bc4"/></linearGradient></defs>
         <rect width="480" height="180" fill="url(#sg)"/>
-        <line x1="80"  y1="0" x2="50"  y2="180" stroke="#a0e8ff" stroke-width="22" stroke-opacity="0.09"/>
+        <line x1="80" y1="0" x2="50" y2="180" stroke="#a0e8ff" stroke-width="22" stroke-opacity="0.09"/>
         <line x1="180" y1="0" x2="160" y2="180" stroke="#a0e8ff" stroke-width="18" stroke-opacity="0.07"/>
         <line x1="300" y1="0" x2="280" y2="180" stroke="#a0e8ff" stroke-width="26" stroke-opacity="0.08"/>
         <line x1="420" y1="0" x2="400" y2="180" stroke="#a0e8ff" stroke-width="14" stroke-opacity="0.06"/>
-        <g transform="translate(130,70)">
-          <ellipse cx="0" cy="0" rx="28" ry="13" fill="#5bc8e0" opacity="0.8"/>
-          <polygon points="28,0 46,-11 46,11" fill="#5bc8e0" opacity="0.8"/>
-          <circle cx="-14" cy="-3" r="3" fill="#021e3a" opacity="0.9"/>
-        </g>
-        <g transform="translate(340,100) scale(-1,1)">
-          <ellipse cx="0" cy="0" rx="22" ry="10" fill="#3fbde0" opacity="0.75"/>
-          <polygon points="22,0 38,-9 38,9" fill="#3fbde0" opacity="0.75"/>
-          <circle cx="-11" cy="-2" r="2.5" fill="#021e3a" opacity="0.9"/>
-        </g>
-        <g transform="translate(240,40)">
-          <ellipse cx="0" cy="0" rx="14" ry="6" fill="#7ee8fa" opacity="0.6"/>
-          <polygon points="14,0 24,-5 24,5" fill="#7ee8fa" opacity="0.6"/>
-          <circle cx="-7" cy="-1.5" r="1.8" fill="#021e3a" opacity="0.9"/>
-        </g>
-        <g opacity="0.65">
-          <line x1="30" y1="180" x2="30" y2="130" stroke="#ff8a65" stroke-width="3"/>
-          <circle cx="30" cy="130" r="10" fill="#ff8a65"/>
-          <line x1="30" y1="155" x2="10" y2="140" stroke="#ff8a65" stroke-width="2.2"/>
-          <circle cx="10" cy="140" r="7" fill="#ff8a65"/>
-          <line x1="30" y1="148" x2="48" y2="136" stroke="#ff8a65" stroke-width="2"/>
-          <circle cx="48" cy="136" r="6" fill="#ff8a65"/>
-        </g>
-        <g opacity="0.6" transform="translate(440,0)">
-          <line x1="0" y1="180" x2="0" y2="143" stroke="#ff7043" stroke-width="3"/>
-          <circle cx="0" cy="143" r="8" fill="#ff7043"/>
-          <line x1="0" y1="163" x2="-16" y2="152" stroke="#ff7043" stroke-width="2"/>
-          <circle cx="-16" cy="152" r="5.5" fill="#ff7043"/>
-        </g>
-        <circle cx="200" cy="60"  r="5"   fill="none" stroke="#a0e8ff" stroke-width="1.3" opacity="0.5"/>
-        <circle cx="360" cy="40"  r="3.5" fill="none" stroke="#a0e8ff" stroke-width="1"   opacity="0.45"/>
-        <circle cx="100" cy="120" r="4"   fill="none" stroke="#a0e8ff" stroke-width="1.1" opacity="0.4"/>
-        <circle cx="420" cy="80"  r="6"   fill="none" stroke="#a0e8ff" stroke-width="1.3" opacity="0.35"/>
-        <ellipse cx="390" cy="65" rx="12" ry="18" fill="rgba(2,30,58,0.45)"/>
-        <rect x="380" y="52" width="20" height="10" rx="5" fill="rgba(2,30,58,0.45)"/>
-        <line x1="390" y1="83" x2="380" y2="100" stroke="rgba(2,30,58,0.4)" stroke-width="3"/>
-        <line x1="390" y1="83" x2="400" y2="100" stroke="rgba(2,30,58,0.4)" stroke-width="3"/>
+        <g transform="translate(130,70)"><ellipse cx="0" cy="0" rx="28" ry="13" fill="#5bc8e0" opacity="0.8"/><polygon points="28,0 46,-11 46,11" fill="#5bc8e0" opacity="0.8"/><circle cx="-14" cy="-3" r="3" fill="#021e3a" opacity="0.9"/></g>
+        <g transform="translate(340,100) scale(-1,1)"><ellipse cx="0" cy="0" rx="22" ry="10" fill="#3fbde0" opacity="0.75"/><polygon points="22,0 38,-9 38,9" fill="#3fbde0" opacity="0.75"/><circle cx="-11" cy="-2" r="2.5" fill="#021e3a" opacity="0.9"/></g>
+        <g transform="translate(240,40)"><ellipse cx="0" cy="0" rx="14" ry="6" fill="#7ee8fa" opacity="0.6"/><polygon points="14,0 24,-5 24,5" fill="#7ee8fa" opacity="0.6"/><circle cx="-7" cy="-1.5" r="1.8" fill="#021e3a" opacity="0.9"/></g>
+        <g opacity="0.65"><line x1="30" y1="180" x2="30" y2="130" stroke="#ff8a65" stroke-width="3"/><circle cx="30" cy="130" r="10" fill="#ff8a65"/><line x1="30" y1="155" x2="10" y2="140" stroke="#ff8a65" stroke-width="2.2"/><circle cx="10" cy="140" r="7" fill="#ff8a65"/></g>
+        <circle cx="200" cy="60" r="5" fill="none" stroke="#a0e8ff" stroke-width="1.3" opacity="0.5"/>
+        <circle cx="360" cy="40" r="3.5" fill="none" stroke="#a0e8ff" stroke-width="1" opacity="0.45"/>
+        <circle cx="100" cy="120" r="4" fill="none" stroke="#a0e8ff" stroke-width="1.1" opacity="0.4"/>
       </svg>
       <div style="position:relative;z-index:1;text-align:center;color:rgba(255,255,255,0.3);font-size:11px;letter-spacing:0.08em;margin-top:150px">UNDERWATER PHOTOGRAPHY</div>
     </div>
-
     <div class="society-name">Dallas Underwater Photography Society</div>
     <div class="contest-title">Photo Contest</div>
   </div>
 
   <div class="card" style="width:100%;max-width:400px;margin-top:28px">
     <div class="section-tag center mb12">Select Your Role</div>
-
     <label class="role-label" id="label-admin" for="radio-admin">
       <input type="radio" name="role" value="admin" id="radio-admin">
-      <div>
-        <div class="role-name">Administrator</div>
-        <div class="role-desc" id="admin-desc">Set up and manage the vote session</div>
-      </div>
+      <div><div class="role-name">Administrator</div><div class="role-desc" id="admin-desc">Set up and manage the vote session</div></div>
     </label>
-
     <label class="role-label" id="label-voter" for="radio-voter">
       <input type="radio" name="role" value="voter" id="radio-voter">
-      <div>
-        <div class="role-name">Voter</div>
-        <div class="role-desc">Cast your vote for the best photo</div>
-      </div>
+      <div><div class="role-name">Voter</div><div class="role-desc">Cast your vote for the best photo</div></div>
     </label>
-
     <button class="btn btn-primary btn-full mt16" id="btn-enter" disabled>ENTER SESSION →</button>
     <div class="err center" id="splash-err"></div>
   </div>
-
   <div class="muted center mt16">Dallas Underwater Photography Society &nbsp;·&nbsp; Photo Contest Voting System</div>
 </div>
 
-<!-- ════════════════════════════════════════════════════════ -->
-<!--  SCREEN 2 · ADMIN PANEL                                 -->
-<!-- ════════════════════════════════════════════════════════ -->
+<!-- SCREEN 2 · ADMIN -->
 <div id="screen-admin" class="screen hidden">
   <div style="width:100%;max-width:680px">
-
     <div class="center mb20">
       <div class="section-tag">Administrator Panel</div>
       <div class="society-name" style="font-size:clamp(20px,3.5vw,34px)">Dallas Underwater Photography Society</div>
@@ -417,7 +266,7 @@
         <input type="number" id="inp-photocount" min="1" max="500" placeholder="Enter number…" style="width:160px">
         <button class="btn btn-primary" id="btn-confirm-count">Confirm</button>
         <div id="count-confirmed" class="hidden" style="color:var(--aqua);font-weight:600;font-size:15px">
-          ✓ You have selected: <span id="count-display"></span> photos
+          ✓ <span id="count-display"></span> photos selected
           <button class="btn btn-ghost" style="margin-left:10px;padding:6px 14px;font-size:12px" id="btn-change-count">Change</button>
         </div>
       </div>
@@ -426,19 +275,21 @@
 
     <div class="card mb12 hidden" id="card-share">
       <div class="section-tag">Step 2 — Invite Voters</div>
-      <p style="color:var(--soft);font-size:15px;margin-bottom:20px">
-        Share the URL below or have voters scan the QR code to join.
-      </p>
-      <div class="admin-grid">
-        <div>
-          <div class="field-label">Session URL</div>
-          <div class="url-box" id="session-url-display"></div>
-          <button class="btn btn-ghost mt8" style="font-size:12px;padding:8px 16px" id="btn-copy-url">📋 Copy URL</button>
-        </div>
-        <div class="center">
-          <div class="field-label">QR Code</div>
-          <div class="qr-wrap" id="qr-container">
-            <img id="qr-img" src="" alt="QR Code" width="160" height="160">
+      <p style="color:var(--soft);font-size:15px;margin-bottom:12px">Paste the URL where this file is hosted, or type your local network address:</p>
+      <div class="flex-row mb12">
+        <input type="text" id="inp-session-url" placeholder="e.g. https://yoursite.com/dups.html" style="flex:1;font-size:14px;padding:10px 14px">
+        <button class="btn btn-primary" id="btn-set-url" style="padding:10px 18px;font-size:13px">Set URL</button>
+      </div>
+      <div id="share-display" class="hidden">
+        <div class="admin-grid">
+          <div>
+            <div class="field-label">Session URL</div>
+            <div class="url-box" id="session-url-display"></div>
+            <button class="btn btn-ghost mt8" style="font-size:12px;padding:8px 16px" id="btn-copy-url">📋 Copy URL</button>
+          </div>
+          <div class="center">
+            <div class="field-label">QR Code</div>
+            <div class="qr-wrap"><img id="qr-img" src="" alt="QR Code" width="160" height="160"></div>
           </div>
         </div>
       </div>
@@ -446,10 +297,7 @@
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
         <span style="color:var(--soft);font-size:14px">Votes received:</span>
         <span style="color:var(--aqua);font-weight:700;font-size:18px" id="admin-vote-count">0</span>
-        <span class="pill pill-green" id="voting-status-pill">
-          <span style="width:7px;height:7px;border-radius:50%;background:#50dc78;display:inline-block"></span>
-          Voting open
-        </span>
+        <span class="pill pill-green"><span style="width:7px;height:7px;border-radius:50%;background:#50dc78;display:inline-block"></span> Voting open</span>
       </div>
     </div>
 
@@ -465,36 +313,27 @@
   </div>
 </div>
 
-<!-- ════════════════════════════════════════════════════════ -->
-<!--  SCREEN 3 · VOTER PANEL                                 -->
-<!-- ════════════════════════════════════════════════════════ -->
+<!-- SCREEN 3 · VOTER -->
 <div id="screen-voter" class="screen hidden">
   <div style="width:100%;max-width:400px">
     <div class="center mb20">
-      <div style="color:var(--muted);font-size:11px;letter-spacing:0.1em;margin-bottom:6px">
-        DALLAS UNDERWATER PHOTOGRAPHY SOCIETY
-      </div>
+      <div style="color:var(--muted);font-size:11px;letter-spacing:0.1em;margin-bottom:6px">DALLAS UNDERWATER PHOTOGRAPHY SOCIETY</div>
       <div class="contest-title" style="font-size:clamp(30px,8vw,56px)">Photo Contest</div>
     </div>
-
     <div class="card center" id="voter-waiting">
       <div class="spinner"></div>
       <div style="color:var(--aqua);font-size:16px;margin-bottom:8px">Waiting for the administrator…</div>
       <div class="muted">The contest will begin shortly.</div>
     </div>
-
     <div class="card hidden" id="voter-active">
       <div class="section-tag center">Cast Your Vote</div>
-      <p style="color:var(--soft);font-size:15px;margin-bottom:20px;line-height:1.7;text-align:center">
-        Enter the number of the photo which<br>you believe is the best:
-      </p>
+      <p style="color:var(--soft);font-size:15px;margin-bottom:20px;line-height:1.7;text-align:center">Enter the number of the photo you believe is the best:</p>
       <input type="number" id="inp-vote" class="vote-input-big" min="1" placeholder="Photo #">
       <div class="err center" id="vote-err"></div>
       <button class="btn btn-primary btn-full mt16" id="btn-submit-vote">SUBMIT VOTE</button>
       <div class="vote-confirm hidden" id="vote-confirm-msg"></div>
       <div class="muted center mt12" id="vote-range-hint"></div>
     </div>
-
     <div class="card center hidden" id="voter-closed">
       <div style="font-size:36px;margin-bottom:12px">🔒</div>
       <div style="color:var(--aqua);font-size:17px;font-weight:600;margin-bottom:8px">Voting is closed</div>
@@ -503,39 +342,25 @@
   </div>
 </div>
 
-<!-- ════════════════════════════════════════════════════════ -->
-<!--  SCREEN 4 · RESULTS                                     -->
-<!-- ════════════════════════════════════════════════════════ -->
+<!-- SCREEN 4 · RESULTS -->
 <div id="screen-results" class="screen hidden">
   <div style="width:100%;max-width:660px">
     <div class="center mb20">
       <div style="font-size:48px;margin-bottom:8px">🏆</div>
       <div class="section-tag">Contest Results</div>
-      <div class="society-name" style="font-size:clamp(20px,3.5vw,34px);margin-top:4px">
-        Dallas Underwater Photography Society
-      </div>
+      <div class="society-name" style="font-size:clamp(20px,3.5vw,34px);margin-top:4px">Dallas Underwater Photography Society</div>
       <div style="color:var(--muted);font-size:14px;margin-top:6px" id="results-summary"></div>
     </div>
-
     <div id="results-list"></div>
-
     <div class="center mt36">
       <button class="btn btn-ghost" id="btn-new-session">↺ Start New Session</button>
     </div>
   </div>
 </div>
 
-<!-- Config banner -->
-<div id="config-banner">
-  ⚠️ Running in <strong>single-device demo mode</strong> (no sync backend configured).
-  For multi-device voting, add your Firebase config in the script below.
-</div>
+<div id="config-banner">⚠️ Running in <strong>single-device demo mode</strong> — Firebase not configured.</div>
 
-<!-- ════════════════════════════════════════════════════════ -->
-<!--  JAVASCRIPT                                             -->
-<!-- ════════════════════════════════════════════════════════ -->
 <script>
-// ── PASTE YOUR FIREBASE CONFIG HERE ──────────────────────────────────────────
 const firebaseConfig = {
   apiKey: "AIzaSyC3Q9ceRjDMzeHh4hAbA87hfD3t2Mthcv0",
   authDomain: "dups-contest.firebaseapp.com",
@@ -543,117 +368,62 @@ const firebaseConfig = {
   projectId: "dups-contest",
   storageBucket: "dups-contest.firebasestorage.app",
   messagingSenderId: "887684835763",
-  appId: "1:887684835763:web:e1e6f3af811363f16e03c6",
-  measurementId: "G-9LTYRPF6J3"
+  appId: "1:887684835763:web:e1e6f3af811363f16e03c6"
 };
-// ─────────────────────────────────────────────────────────────────────────────
 
-// FIX: was referencing undefined FIREBASE_CONFIG (uppercase) — now uses firebaseConfig
 const USE_FIREBASE = !!(firebaseConfig.apiKey && firebaseConfig.databaseURL);
 
-// ═════════════════════════════════════════════════════════════════
-//  ANIMATED BACKGROUND
-// ═════════════════════════════════════════════════════════════════
 (function buildBg() {
   const bg = document.getElementById('ocean-bg');
   for (let i = 0; i < 6; i++) {
-    const r = document.createElement('div');
-    r.className = 'ray';
-    r.style.cssText = `left:${5+i*16}%;animation-duration:${7+i*1.3}s;animation-delay:${-i*1.1}s;opacity:${0.6+i*0.05}`;
+    const r = document.createElement('div'); r.className = 'ray';
+    r.style.cssText = `left:${5+i*16}%;animation-duration:${7+i*1.3}s;animation-delay:${-i*1.1}s`;
     bg.appendChild(r);
   }
-  [6,4,8,5,7,4,9,5,6,4,7].forEach((s, i) => {
-    const b = document.createElement('div');
-    b.className = 'bubble';
+  [6,4,8,5,7,4,9,5,6,4,7].forEach((s,i) => {
+    const b = document.createElement('div'); b.className = 'bubble';
     b.style.cssText = `width:${s}px;height:${s}px;left:${8+i*8}%;animation-duration:${8+i*1.5}s;animation-delay:${-i*1.8}s`;
     bg.appendChild(b);
   });
 })();
 
-// ═════════════════════════════════════════════════════════════════
-//  STATE
-// ═════════════════════════════════════════════════════════════════
-const DEFAULT_STATE = {
-  adminSet:      false,
-  photoCount:    null,
-  votingOpen:    false,
-  resultsReady:  false,
-  votes:         {},
-  sessionId:     null,
-};
-
-let state = { ...DEFAULT_STATE };
+const DEFAULT_STATE = { adminSet:false, photoCount:null, votingOpen:false, resultsReady:false, votes:{}, sessionId:null };
+let state = {...DEFAULT_STATE};
 let myRole = null;
-let myVoterId = 'v_' + Math.random().toString(36).slice(2, 8);
-let dbRef = null;
-let pollTimer = null;
+let myVoterId = 'v_' + Math.random().toString(36).slice(2,8);
+let dbRef = null, pollTimer = null;
 
-// ═════════════════════════════════════════════════════════════════
-//  STORAGE LAYER
-// ═════════════════════════════════════════════════════════════════
-function lsLoad() {
-  try { return JSON.parse(localStorage.getItem('dups_session') || 'null'); } catch { return null; }
-}
-function lsSave(s) {
-  try { localStorage.setItem('dups_session', JSON.stringify(s)); } catch {}
-}
-function lsClear() {
-  try { localStorage.removeItem('dups_session'); } catch {}
-}
+function lsLoad() { try { return JSON.parse(localStorage.getItem('dups_session')||'null'); } catch { return null; } }
+function lsSave(s) { try { localStorage.setItem('dups_session', JSON.stringify(s)); } catch {} }
+function lsClear() { try { localStorage.removeItem('dups_session'); } catch {} }
 function fbSave(s) { if (dbRef) dbRef.set(s); }
 function fbClear() { if (dbRef) dbRef.remove(); }
+function saveState(s) { state=s; if(USE_FIREBASE) fbSave(s); else lsSave(s); }
+function clearState() { state={...DEFAULT_STATE}; if(USE_FIREBASE) fbClear(); else lsClear(); }
+function loadStateOnce() { const s=lsLoad(); if(s) state=s; return state; }
 
-function saveState(s) {
-  state = s;
-  if (USE_FIREBASE) fbSave(s); else lsSave(s);
-}
-function clearState() {
-  state = { ...DEFAULT_STATE };
-  if (USE_FIREBASE) fbClear(); else lsClear();
-}
-function loadStateOnce() {
-  const s = lsLoad();
-  if (s) state = s;
-  return state;
-}
-
-// ═════════════════════════════════════════════════════════════════
-//  FIREBASE INIT
-// ═════════════════════════════════════════════════════════════════
 function initFirebase() {
   return new Promise(resolve => {
     if (!USE_FIREBASE) { resolve(false); return; }
     const scripts = [
       'https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js',
-      'https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js',
+      'https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js'
     ];
     let loaded = 0;
     scripts.forEach(src => {
-      const s = document.createElement('script');
-      s.src = src;
+      const s = document.createElement('script'); s.src = src;
       s.onload = () => {
-        loaded++;
-        if (loaded === scripts.length) {
+        if (++loaded === scripts.length) {
           try {
-            if (!firebase.apps.length) firebase.initializeApp(firebaseConfig); // FIX: was FIREBASE_CONFIG
+            if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
             const db = firebase.database();
             dbRef = db.ref('dups/session');
-            dbRef.on('value', snap => {
-              const data = snap.val();
-              if (data) { state = data; onStateChange(state); }
-            });
-            dbRef.once('value', snap => {
-              const data = snap.val();
-              if (data) state = data;
-              resolve(true);
-            });
-          } catch (e) {
-            console.warn('Firebase init failed:', e);
-            resolve(false);
-          }
+            dbRef.on('value', snap => { const d=snap.val(); if(d){state=d;onStateChange(state);} });
+            dbRef.once('value', snap => { const d=snap.val(); if(d) state=d; resolve(true); });
+          } catch(e) { console.warn('Firebase init failed:',e); resolve(false); }
         }
       };
-      s.onerror = () => { loaded++; if (loaded === scripts.length) resolve(false); };
+      s.onerror = () => { if(++loaded===scripts.length) resolve(false); };
       document.head.appendChild(s);
     });
   });
@@ -663,69 +433,45 @@ function startPolling() {
   stopPolling();
   if (USE_FIREBASE) return;
   pollTimer = setInterval(() => {
-    const s = lsLoad();
-    if (!s) return;
-    if (JSON.stringify(s) !== JSON.stringify(state)) { state = s; onStateChange(state); }
+    const s = lsLoad(); if (!s) return;
+    if (JSON.stringify(s)!==JSON.stringify(state)) { state=s; onStateChange(state); }
   }, 1500);
 }
-function stopPolling() {
-  if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
-}
+function stopPolling() { if(pollTimer){clearInterval(pollTimer);pollTimer=null;} }
 
-// ═════════════════════════════════════════════════════════════════
-//  SCREEN HELPERS
-// ═════════════════════════════════════════════════════════════════
 const screens = ['splash','admin','voter','results'];
 function showScreen(name) {
-  screens.forEach(s => {
-    const el = document.getElementById('screen-' + s);
-    if (el) el.classList.toggle('hidden', s !== name);
-  });
+  screens.forEach(s => { const el=document.getElementById('screen-'+s); if(el) el.classList.toggle('hidden',s!==name); });
 }
 
-// ═════════════════════════════════════════════════════════════════
-//  QR CODE
-// ═════════════════════════════════════════════════════════════════
 function buildQR(url) {
-  document.getElementById('qr-img').src =
-    `https://api.qrserver.com/v1/create-qr-code/?size=160x160&color=021e3a&bgcolor=ffffff&data=${encodeURIComponent(url)}`;
+  document.getElementById('qr-img').src = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&color=021e3a&bgcolor=ffffff&data=${encodeURIComponent(url)}`;
   document.getElementById('session-url-display').textContent = url;
+  document.getElementById('share-display').classList.remove('hidden');
 }
 
-// ═════════════════════════════════════════════════════════════════
-//  SPLASH SCREEN
-// ═════════════════════════════════════════════════════════════════
 function initSplash() {
-  const radioAdmin  = document.getElementById('radio-admin');
-  const radioVoter  = document.getElementById('radio-voter');
-  const labelAdmin  = document.getElementById('label-admin');
-  const labelVoter  = document.getElementById('label-voter');
-  const btnEnter    = document.getElementById('btn-enter');
-  const splashErr   = document.getElementById('splash-err');
-  const adminDesc   = document.getElementById('admin-desc');
+  const radioAdmin=document.getElementById('radio-admin'), radioVoter=document.getElementById('radio-voter');
+  const labelAdmin=document.getElementById('label-admin'), labelVoter=document.getElementById('label-voter');
+  const btnEnter=document.getElementById('btn-enter'), splashErr=document.getElementById('splash-err');
+  const adminDesc=document.getElementById('admin-desc');
 
   function refreshAdminLock() {
     if (state.adminSet) {
-      radioAdmin.disabled = true;
-      labelAdmin.classList.add('disabled');
-      adminDesc.textContent = 'Already taken for this session';
-      if (radioAdmin.checked) { radioAdmin.checked = false; updateSelection(); }
+      radioAdmin.disabled=true; labelAdmin.classList.add('disabled');
+      adminDesc.textContent='Already taken for this session';
+      if(radioAdmin.checked){radioAdmin.checked=false;updateSelection();}
     } else {
-      radioAdmin.disabled = false;
-      labelAdmin.classList.remove('disabled');
-      adminDesc.textContent = 'Set up and manage the vote session';
+      radioAdmin.disabled=false; labelAdmin.classList.remove('disabled');
+      adminDesc.textContent='Set up and manage the vote session';
     }
   }
   refreshAdminLock();
 
   const lockPoll = setInterval(() => {
-    if (!USE_FIREBASE) {
-      const s = lsLoad();
-      if (s && s.adminSet !== state.adminSet) { state = s; refreshAdminLock(); }
-    }
+    if (!USE_FIREBASE) { const s=lsLoad(); if(s&&s.adminSet!==state.adminSet){state=s;refreshAdminLock();} }
   }, 1200);
 
-  // FIX: read checked state via querySelector for reliability
   function updateSelection() {
     const checked = document.querySelector('input[name="role"]:checked');
     labelAdmin.classList.toggle('selected', radioAdmin.checked && !radioAdmin.disabled);
@@ -734,280 +480,180 @@ function initSplash() {
     splashErr.textContent = '';
   }
 
-  // Listen on both change and click to cover all browsers
-  [radioAdmin, radioVoter].forEach(r => {
-    r.addEventListener('change', updateSelection);
-    r.addEventListener('click', updateSelection);
-  });
-  labelAdmin.addEventListener('click', () => setTimeout(updateSelection, 0));
-  labelVoter.addEventListener('click', () => setTimeout(updateSelection, 0));
+  [radioAdmin,radioVoter].forEach(r => { r.addEventListener('change',updateSelection); r.addEventListener('click',updateSelection); });
+  labelAdmin.addEventListener('click', ()=>setTimeout(updateSelection,0));
+  labelVoter.addEventListener('click', ()=>setTimeout(updateSelection,0));
 
   btnEnter.addEventListener('click', () => {
-    // FIX: read role from checked radio at click time
-    const checkedRadio = document.querySelector('input[name="role"]:checked');
-    const role = checkedRadio ? checkedRadio.value : null;
-
-    clearInterval(lockPoll);
-    splashErr.textContent = '';
-
-    if (role === 'admin') {
-      if (state.adminSet) {
-        refreshAdminLock();
-        splashErr.textContent = 'Administrator role is already taken.';
-        return;
-      }
-      myRole = 'admin';
-      saveState({ ...state, adminSet: true });
-      showScreen('admin');
-      initAdmin();
-      startPolling();
-    } else if (role === 'voter') {
-      myRole = 'voter';
-      showScreen('voter');
-      initVoter();
-      startPolling();
+    const checked = document.querySelector('input[name="role"]:checked');
+    const role = checked ? checked.value : null;
+    clearInterval(lockPoll); splashErr.textContent='';
+    if (role==='admin') {
+      if (state.adminSet) { refreshAdminLock(); splashErr.textContent='Administrator role is already taken.'; return; }
+      myRole='admin'; saveState({...state,adminSet:true});
+      showScreen('admin'); initAdmin(); startPolling();
+    } else if (role==='voter') {
+      myRole='voter'; showScreen('voter'); initVoter(); startPolling();
     } else {
-      splashErr.textContent = 'Please select a role first.';
+      splashErr.textContent='Please select a role first.';
     }
   });
-
   window._splashLockPoll = () => refreshAdminLock();
 }
 
-// ═════════════════════════════════════════════════════════════════
-//  ADMIN PANEL
-// ═════════════════════════════════════════════════════════════════
 function initAdmin() {
-  const inpCount    = document.getElementById('inp-photocount');
-  const btnConfirm  = document.getElementById('btn-confirm-count');
-  const countConf   = document.getElementById('count-confirmed');
-  const countDisp   = document.getElementById('count-display');
-  const countErr    = document.getElementById('count-err');
-  const btnChange   = document.getElementById('btn-change-count');
-  const cardShare   = document.getElementById('card-share');
-  const cardCount   = document.getElementById('card-count');
-  const btnCount    = document.getElementById('btn-count-votes');
-  const btnReset    = document.getElementById('btn-reset-admin');
-  const voteCountEl = document.getElementById('admin-vote-count');
+  const inpCount=document.getElementById('inp-photocount'), btnConfirm=document.getElementById('btn-confirm-count');
+  const countConf=document.getElementById('count-confirmed'), countDisp=document.getElementById('count-display');
+  const countErr=document.getElementById('count-err'), btnChange=document.getElementById('btn-change-count');
+  const cardShare=document.getElementById('card-share'), cardCount=document.getElementById('card-count');
+  const btnCount=document.getElementById('btn-count-votes'), btnReset=document.getElementById('btn-reset-admin');
+  const voteCountEl=document.getElementById('admin-vote-count');
+  const inpUrl=document.getElementById('inp-session-url'), btnSetUrl=document.getElementById('btn-set-url');
 
   if (state.photoCount) showCountConfirmed(state.photoCount);
 
   function showCountConfirmed(n) {
-    countConf.classList.remove('hidden');
-    countDisp.textContent = n;
-    btnConfirm.classList.add('hidden');
-    inpCount.style.display = 'none';
-    cardShare.classList.remove('hidden');
-    cardCount.classList.remove('hidden');
-    buildQR(window.location.href);
+    countConf.classList.remove('hidden'); countDisp.textContent=n;
+    btnConfirm.classList.add('hidden'); inpCount.style.display='none';
+    cardShare.classList.remove('hidden'); cardCount.classList.remove('hidden');
   }
-
   function hideCountConfirmed() {
-    countConf.classList.add('hidden');
-    btnConfirm.classList.remove('hidden');
-    inpCount.style.display = '';
-    cardShare.classList.add('hidden');
-    cardCount.classList.add('hidden');
+    countConf.classList.add('hidden'); btnConfirm.classList.remove('hidden');
+    inpCount.style.display=''; cardShare.classList.add('hidden'); cardCount.classList.add('hidden');
   }
 
   btnConfirm.addEventListener('click', () => {
-    const n = parseInt(inpCount.value);
-    if (!n || n < 1 || n > 500) {
-      countErr.textContent = 'Please enter a number between 1 and 500.'; return;
-    }
-    countErr.textContent = '';
-    saveState({ ...state, photoCount: n, votes: {}, votingOpen: true, resultsReady: false });
+    const n=parseInt(inpCount.value);
+    if (!n||n<1||n>500) { countErr.textContent='Please enter a number between 1 and 500.'; return; }
+    countErr.textContent='';
+    saveState({...state,photoCount:n,votes:{},votingOpen:true,resultsReady:false});
     showCountConfirmed(n);
   });
 
   btnChange.addEventListener('click', () => {
-    inpCount.value = state.photoCount || '';
-    saveState({ ...state, photoCount: null, votes: {}, votingOpen: false });
+    inpCount.value=state.photoCount||'';
+    saveState({...state,photoCount:null,votes:{},votingOpen:false});
     hideCountConfirmed();
   });
 
+  // Manual URL entry for QR code
+  btnSetUrl.addEventListener('click', () => {
+    const url = inpUrl.value.trim();
+    if (!url) { return; }
+    buildQR(url);
+  });
+  inpUrl.addEventListener('keydown', e => { if(e.key==='Enter') btnSetUrl.click(); });
+
   btnCount.addEventListener('click', () => {
     if (!state.votingOpen) return;
-    const newState = { ...state, votingOpen: false, resultsReady: true };
-    saveState(newState);
-    stopPolling();
-    showResults(newState);
+    const newState={...state,votingOpen:false,resultsReady:true};
+    saveState(newState); stopPolling(); showResults(newState);
   });
 
   btnReset.addEventListener('click', () => {
     if (!confirm('Reset this session? All votes will be cleared.')) return;
-    stopPolling();
-    clearState();
-    myRole = null;
-    location.reload();
+    stopPolling(); clearState(); myRole=null; location.reload();
   });
 
-  function refreshVoteCount() {
-    voteCountEl.textContent = Object.keys(state.votes || {}).length;
-  }
+  function refreshVoteCount() { voteCountEl.textContent=Object.keys(state.votes||{}).length; }
   refreshVoteCount();
 
-  window._adminRefresh = () => {
-    refreshVoteCount();
-    if (state.resultsReady) { stopPolling(); showResults(state); }
-  };
+  window._adminRefresh = () => { refreshVoteCount(); if(state.resultsReady){stopPolling();showResults(state);} };
 }
 
-// ═════════════════════════════════════════════════════════════════
-//  VOTER PANEL
-// ═════════════════════════════════════════════════════════════════
+document.getElementById('btn-copy-url').addEventListener('click', function() {
+  const url=document.getElementById('session-url-display').textContent;
+  navigator.clipboard.writeText(url).then(()=>{
+    this.textContent='✓ Copied!'; setTimeout(()=>{this.textContent='📋 Copy URL';},2000);
+  });
+});
+
 function initVoter() {
-  const waiting   = document.getElementById('voter-waiting');
-  const active    = document.getElementById('voter-active');
-  const closed    = document.getElementById('voter-closed');
-  const inpVote   = document.getElementById('inp-vote');
-  const btnSubmit = document.getElementById('btn-submit-vote');
-  const voteErr   = document.getElementById('vote-err');
-  const voteConf  = document.getElementById('vote-confirm-msg');
-  const rangeHint = document.getElementById('vote-range-hint');
+  const waiting=document.getElementById('voter-waiting'), active=document.getElementById('voter-active');
+  const closed=document.getElementById('voter-closed'), inpVote=document.getElementById('inp-vote');
+  const btnSubmit=document.getElementById('btn-submit-vote'), voteErr=document.getElementById('vote-err');
+  const voteConf=document.getElementById('vote-confirm-msg'), rangeHint=document.getElementById('vote-range-hint');
 
   function renderVoterState() {
     if (!state.photoCount) {
-      waiting.classList.remove('hidden');
-      active.classList.add('hidden');
-      closed.classList.add('hidden');
+      waiting.classList.remove('hidden'); active.classList.add('hidden'); closed.classList.add('hidden');
     } else if (state.resultsReady) {
-      waiting.classList.add('hidden');
-      active.classList.add('hidden');
-      closed.classList.remove('hidden');
+      waiting.classList.add('hidden'); active.classList.add('hidden'); closed.classList.remove('hidden');
     } else if (state.votingOpen) {
-      waiting.classList.add('hidden');
-      closed.classList.add('hidden');
-      active.classList.remove('hidden');
-      active.style.opacity = '1';
-      inpVote.disabled = false;
-      btnSubmit.disabled = false;
-      inpVote.max = state.photoCount;
-      rangeHint.textContent = `Photos 1 – ${state.photoCount}`;
-      if (state.votes && state.votes[myVoterId]) {
-        inpVote.value = state.votes[myVoterId];
-        showVoteConfirm(state.votes[myVoterId]);
-      }
+      waiting.classList.add('hidden'); closed.classList.add('hidden'); active.classList.remove('hidden');
+      active.style.opacity='1'; inpVote.disabled=false; btnSubmit.disabled=false;
+      inpVote.max=state.photoCount; rangeHint.textContent=`Photos 1 – ${state.photoCount}`;
+      if (state.votes&&state.votes[myVoterId]) { inpVote.value=state.votes[myVoterId]; showVoteConfirm(state.votes[myVoterId]); }
     } else {
-      waiting.classList.add('hidden');
-      active.classList.remove('hidden');
-      active.style.opacity = '0.5';
-      closed.classList.add('hidden');
-      inpVote.disabled = true;
-      btnSubmit.disabled = true;
+      waiting.classList.add('hidden'); active.classList.remove('hidden'); active.style.opacity='0.5';
+      closed.classList.add('hidden'); inpVote.disabled=true; btnSubmit.disabled=true;
     }
   }
   renderVoterState();
 
   function showVoteConfirm(n) {
     voteConf.classList.remove('hidden');
-    voteConf.innerHTML = `✓ Your vote for <strong>Photo ${n}</strong> is recorded. You may change it until voting closes.`;
-    btnSubmit.textContent = 'UPDATE VOTE';
+    voteConf.innerHTML=`✓ Your vote for <strong>Photo ${n}</strong> is recorded. You may change it until voting closes.`;
+    btnSubmit.textContent='UPDATE VOTE';
   }
 
   btnSubmit.addEventListener('click', () => {
-    const n = parseInt(inpVote.value);
-    if (!n || n < 1 || n > state.photoCount) {
-      voteErr.textContent = `Please enter a number between 1 and ${state.photoCount}.`; return;
-    }
-    voteErr.textContent = '';
-    if (!state.votingOpen) { voteErr.textContent = 'Voting has been closed.'; return; }
-    saveState({ ...state, votes: { ...(state.votes || {}), [myVoterId]: n } });
+    const n=parseInt(inpVote.value);
+    if (!n||n<1||n>state.photoCount) { voteErr.textContent=`Please enter a number between 1 and ${state.photoCount}.`; return; }
+    voteErr.textContent='';
+    if (!state.votingOpen) { voteErr.textContent='Voting has been closed.'; return; }
+    saveState({...state,votes:{...(state.votes||{}),[myVoterId]:n}});
     showVoteConfirm(n);
   });
 
   window._voterRefresh = () => {
     renderVoterState();
-    if (state.resultsReady) {
-      waiting.classList.add('hidden');
-      active.classList.add('hidden');
-      closed.classList.remove('hidden');
-    }
+    if (state.resultsReady) { waiting.classList.add('hidden'); active.classList.add('hidden'); closed.classList.remove('hidden'); }
   };
 }
 
-// ═════════════════════════════════════════════════════════════════
-//  RESULTS SCREEN
-// ═════════════════════════════════════════════════════════════════
 function showResults(s) {
-  const votes      = s.votes || {};
-  const photoCount = s.photoCount || 0;
-  const total      = Object.values(votes).length;
-  const tally = {};
-  for (let i = 1; i <= photoCount; i++) tally[i] = 0;
-  Object.values(votes).forEach(v => { if (tally[v] !== undefined) tally[v]++; });
-  const sorted = Object.entries(tally).sort((a, b) => b[1] - a[1]);
-  const maxV = sorted[0]?.[1] || 1;
-
-  document.getElementById('results-summary').textContent =
-    `${total} vote${total !== 1 ? 's' : ''} cast · ${photoCount} photo${photoCount !== 1 ? 's' : ''} in contest`;
-
-  const list = document.getElementById('results-list');
-  list.innerHTML = '';
-  const medals = ['🥇','🥈','🥉'];
-
-  sorted.forEach(([photo, count], idx) => {
-    const pct = maxV > 0 ? Math.round((count / maxV) * 100) : 0;
-    const row = document.createElement('div');
-    row.className = 'result-row' + (idx === 0 && count > 0 ? ' winner' : '');
-    row.innerHTML = `
-      <div class="result-rank">${medals[idx] || '<span style="color:var(--muted);font-size:14px">#'+(idx+1)+'</span>'}</div>
-      <div class="result-bar-wrap">
-        <div class="result-meta">
-          <span class="result-photo">Photo ${photo}</span>
-          <span class="result-count">${count} vote${count !== 1 ? 's' : ''}</span>
-        </div>
-        <div class="result-bar-bg">
-          <div class="result-bar-fill" style="width:0%" data-pct="${pct}"></div>
-        </div>
-      </div>`;
+  const votes=s.votes||{}, photoCount=s.photoCount||0, total=Object.values(votes).length;
+  const tally={};
+  for(let i=1;i<=photoCount;i++) tally[i]=0;
+  Object.values(votes).forEach(v=>{if(tally[v]!==undefined)tally[v]++;});
+  const sorted=Object.entries(tally).sort((a,b)=>b[1]-a[1]);
+  const maxV=sorted[0]?.[1]||1;
+  document.getElementById('results-summary').textContent=`${total} vote${total!==1?'s':''} cast · ${photoCount} photo${photoCount!==1?'s':''} in contest`;
+  const list=document.getElementById('results-list'); list.innerHTML='';
+  const medals=['🥇','🥈','🥉'];
+  sorted.forEach(([photo,count],idx)=>{
+    const pct=maxV>0?Math.round((count/maxV)*100):0;
+    const row=document.createElement('div');
+    row.className='result-row'+(idx===0&&count>0?' winner':'');
+    row.innerHTML=`<div class="result-rank">${medals[idx]||'<span style="color:var(--muted);font-size:14px">#'+(idx+1)+'</span>'}</div><div class="result-bar-wrap"><div class="result-meta"><span class="result-photo">Photo ${photo}</span><span class="result-count">${count} vote${count!==1?'s':''}</span></div><div class="result-bar-bg"><div class="result-bar-fill" style="width:0%" data-pct="${pct}"></div></div></div>`;
     list.appendChild(row);
   });
-
   showScreen('results');
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    list.querySelectorAll('.result-bar-fill').forEach(el => { el.style.width = el.dataset.pct + '%'; });
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    list.querySelectorAll('.result-bar-fill').forEach(el=>{el.style.width=el.dataset.pct+'%';});
   }));
-
-  document.getElementById('btn-new-session').addEventListener('click', () => {
-    if (!confirm('Start a new session? All current results will be cleared.')) return;
+  document.getElementById('btn-new-session').addEventListener('click',()=>{
+    if(!confirm('Start a new session? All current results will be cleared.')) return;
     stopPolling(); clearState(); location.reload();
   });
 }
 
-// ═════════════════════════════════════════════════════════════════
-//  GLOBAL STATE-CHANGE HANDLER
-// ═════════════════════════════════════════════════════════════════
 function onStateChange(s) {
-  state = s;
-  if (myRole === 'admin' && window._adminRefresh) window._adminRefresh();
-  if (myRole === 'voter' && window._voterRefresh) window._voterRefresh();
-  if (!myRole && window._splashLockPoll) window._splashLockPoll();
-  if (myRole === 'admin' && s.resultsReady) { stopPolling(); showResults(s); }
+  state=s;
+  if(myRole==='admin'&&window._adminRefresh) window._adminRefresh();
+  if(myRole==='voter'&&window._voterRefresh) window._voterRefresh();
+  if(!myRole&&window._splashLockPoll) window._splashLockPoll();
+  if(myRole==='admin'&&s.resultsReady){stopPolling();showResults(s);}
 }
 
-// ═════════════════════════════════════════════════════════════════
-//  COPY URL BUTTON
-// ═════════════════════════════════════════════════════════════════
-document.getElementById('btn-copy-url').addEventListener('click', function() {
-  const url = document.getElementById('session-url-display').textContent;
-  navigator.clipboard.writeText(url).then(() => {
-    this.textContent = '✓ Copied!';
-    setTimeout(() => { this.textContent = '📋 Copy URL'; }, 2000);
-  });
-});
-
-// ═════════════════════════════════════════════════════════════════
-//  BOOT
-// ═════════════════════════════════════════════════════════════════
 async function boot() {
-  if (!USE_FIREBASE) document.getElementById('config-banner').style.display = 'block';
+  if (!USE_FIREBASE) document.getElementById('config-banner').style.display='block';
   await initFirebase();
   if (!USE_FIREBASE) loadStateOnce();
   showScreen('splash');
   initSplash();
 }
-
 boot();
 </script>
 </body>
