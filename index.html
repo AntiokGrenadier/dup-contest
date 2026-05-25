@@ -534,9 +534,20 @@ function initAdmin() {
     saveState(newState); stopPolling(); showResults(newState);
   });
 
-  btnReset.addEventListener('click', () => {
+btnReset.addEventListener('click', () => {
     if (!confirm('Reset this session? All votes will be cleared.')) return;
-    stopPolling(); clearState(); myRole=null; location.reload();
+    stopPolling();
+    myRole = null;
+    if (USE_FIREBASE && dbRef) {
+      dbRef.remove().then(() => {
+        location.reload();
+      }).catch(() => {
+        location.reload();
+      });
+    } else {
+      lsClear();
+      location.reload();
+    }
   });
 
   function refreshVoteCount() { voteCountEl.textContent=Object.keys(state.votes||{}).length; }
